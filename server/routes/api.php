@@ -1,19 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\JobsController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/lands', [LandsController::class, 'list']);
+Route::get('/lands/{id}', [LandsController::class, 'detail']);
+Route::post('/lands', [LandsController::class, 'create']);
+Route::put('/lands/{id}', [LandsController::class, 'modify']);
+Route::delete('/lands/{id}', [LandsController::class, 'delete']);
