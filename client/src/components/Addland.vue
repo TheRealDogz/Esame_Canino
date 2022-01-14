@@ -62,7 +62,7 @@
             
         </div>
         <div class="flex flex-col">
-            <button class="bg-blue-400 px-4 py-2 rounded-lg text-white hover:bg-blue-600 mt-7" @click="addLand()">Crea</button>
+            <button class="bg-green-400 px-4 py-2 rounded-lg text-white hover:bg-green-600 mt-7" @click="addLand()">Crea</button>
         </div>
     </div>
 </template>

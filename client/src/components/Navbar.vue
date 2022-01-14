@@ -24,7 +24,7 @@ export default {
                     label: "Home"
                 },
                 {
-                    code: "create",
+                    code: "addland",
                     label: "Nuova terra"
                  },
             ]

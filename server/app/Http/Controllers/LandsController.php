@@ -22,7 +22,7 @@ class LandsController extends Controller
         $landData = json_decode($req->getContent());
 
         $land = new Land();
-        Log::info('landdatas');
+        Log::info($landData);
 
         $land->comune = $landData->comune;
         $land->foto = $landData->foto;
@@ -46,7 +46,7 @@ class LandsController extends Controller
         $editLand = Land::find($id);
         Log::info("requetstsefas");
         Log::info($req);
-        Log::info($landData->linguaggio);
+        Log::info($landData->comune);
 
         $editLand->comune = $landData->comune;
         $editLand->foto = $landData->foto;

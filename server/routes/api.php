@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\JobsController;
+use App\Http\Controllers\LandsController;
 use Illuminate\Support\Facades\Route;
 
 
