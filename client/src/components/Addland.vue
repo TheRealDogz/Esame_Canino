@@ -64,6 +64,7 @@
         <div class="flex flex-col">
             <button class="bg-green-400 px-4 py-2 rounded-lg text-white hover:bg-green-600 mt-7" @click="addLand()">Crea</button>
         </div>
+        {{ isEdit}}
     </div>
 </template>
 
@@ -75,7 +76,7 @@ export default {
     data(){
         return{
             land: {},
-            isEdit: 'false'
+            isEdit: false
         }
     },
     async mounted() {
@@ -90,7 +91,7 @@ export default {
     methods: {
         async addLand() {
             if(!this.isEdit){
-                await axios.post("http://localhost:8000/api/lands/create", this.land)   
+                await axios.post("http://localhost:8000/api/lands", this.land)   
                     this.$router.push({
                     name: 'home'
             })

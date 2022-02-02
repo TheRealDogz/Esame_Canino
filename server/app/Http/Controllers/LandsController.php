@@ -22,11 +22,11 @@ class LandsController extends Controller
         $landData = json_decode($req->getContent());
 
         $land = new Land();
-        Log::info($landData);
 
         $land->comune = $landData->comune;
         $land->foto = $landData->foto;
-        $land->dimensione = $landData->dimensione;
+        $land->dimensioni = 10;
+        // $land->dimensioni = $landData->dimensione;
         $land->foglio = $landData->foglio;
         $land->mappale = $landData->mappale;
         $land->parcella = $landData->parcella;
@@ -34,7 +34,8 @@ class LandsController extends Controller
         $land->irrigazione = $landData->irrigazione;
         $land->offerta = $landData->offerta;
         $land->canone = $landData->canone;
-        $land->disponibile = $landData->disponibile;
+        $land->disponibile = true;
+        // $land->disponibile = $landData->disponibile;
 
         $land->save();
         return $land;
